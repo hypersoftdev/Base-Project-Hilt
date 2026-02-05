@@ -1,0 +1,42 @@
+package com.hypersoft.baseproject.presentation.mediaImageDetails.ui
+
+import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.navArgs
+import com.hypersoft.baseproject.core.extensions.collectWhenCreated
+import com.hypersoft.baseproject.core.extensions.collectWhenStarted
+import com.hypersoft.baseproject.core.extensions.loadImage
+import com.hypersoft.baseproject.core.extensions.popFrom
+import com.hypersoft.baseproject.presentation.R
+import com.hypersoft.baseproject.presentation.base.fragment.BaseFragment
+import com.hypersoft.baseproject.presentation.databinding.FragmentMediaImageDetailBinding
+import com.hypersoft.baseproject.presentation.mediaImageDetails.effect.MediaImageDetailEffect
+import com.hypersoft.baseproject.presentation.mediaImageDetails.intent.MediaImageDetailIntent
+import com.hypersoft.baseproject.presentation.mediaImageDetails.state.MediaImageDetailState
+import com.hypersoft.baseproject.presentation.mediaImageDetails.viewModel.MediaImageDetailViewModel
+import dagger.hilt.android.AndroidEntryPoint
+
+@AndroidEntryPoint
+class MediaImageDetailFragment : BaseFragment<FragmentMediaImageDetailBinding>(FragmentMediaImageDetailBinding::inflate) {
+
+    private val navArgs: MediaImageDetailFragmentArgs by navArgs()
+    private val viewModel: MediaImageDetailViewModel by viewModels()
+
+    override fun onViewCreated() {
+        binding.mbBackMediaImageDetail.setOnClickListener { viewModel.handleIntent(MediaImageDetailIntent.NavigateBack) }
+    }
+
+    override fun initObservers() {
+        collectWhenStarted(viewModel.state) { renderState(it) }
+        collectWhenCreated(viewModel.effect) { handleEffect(it) }
+    }
+
+    private fun renderState(state: MediaImageDetailState) {
+        binding.ifvImageMediaImageDetail.loadImage(state.imageUri)
+    }
+
+    private fun handleEffect(effect: MediaImageDetailEffect) {
+        when (effect) {
+            is MediaImageDetailEffect.NavigateBack -> popFrom(R.id.mediaImageDetailFragment)
+        }
+    }
+}

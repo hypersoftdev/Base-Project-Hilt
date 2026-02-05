@@ -1,0 +1,96 @@
+[versions]
+# -------------- Plugins -------------- #
+agp = "9.0.0"
+kotlin = "2.3.0"
+navSafeArgs = "2.9.7"
+ksp = "2.3.2"
+
+# -------------- Dependencies -------------- #
+coreKtx = "1.17.0"
+appcompat = "1.7.1"
+material = "1.13.0"
+activity = "1.12.3"
+constraintlayout = "2.2.1"
+
+# Splash Screen Api
+coreSplashscreen = "1.2.0"
+
+# Fragment Ktx
+fragmentKtx = "1.8.9"
+
+# Navigational Components
+navigationFragmentKtx = "2.9.7"
+navigationUiKtx = "2.9.7"
+
+# Lifecycle
+lifecycleRuntimeKtx = "2.10.0"
+
+# Firebase
+firebaseCrashlyticsVersion = "20.0.4"
+firebaseAnalyticsVersion = "23.0.0"
+
+# Dependency Injection -> Hilt
+hiltAndroid = "2.59.1"
+
+# Media3 (ExoPlayer)
+media3Version = "1.9.1"
+
+# Glide
+glide = "5.0.5"
+
+# Palette
+palette = "1.0.0"
+
+# Lottie Animations
+lottie = "6.7.1"
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+android-library = { id = "com.android.library", version.ref = "agp" }
+kotlin-parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlin" }
+navigation-safe-args = { id = "androidx.navigation.safeargs.kotlin", version.ref = "navSafeArgs" }
+hilt = { id = "com.google.dagger.hilt.android", version.ref = "hiltAndroid" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+
+[libraries]
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+
+# Splash Screen Api
+androidx-core-splashscreen = { group = "androidx.core", name = "core-splashscreen", version.ref = "coreSplashscreen" }
+
+# Fragment Ktx
+androidx-fragment-ktx = { group = "androidx.fragment", name = "fragment-ktx", version.ref = "fragmentKtx" }
+
+# Navigational Components
+androidx-navigation-fragment-ktx = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "navigationFragmentKtx" }
+androidx-navigation-ui-ktx = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "navigationUiKtx" }
+
+# Lifecycle
+androidx-lifecycle-runtime = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
+
+# Firebase
+firebase-crashlytics = { group = "com.google.firebase", name = "firebase-crashlytics", version.ref = "firebaseCrashlyticsVersion" }
+firebase-analytics = { group = "com.google.firebase", name = "firebase-analytics", version.ref = "firebaseAnalyticsVersion" }
+
+# Dependency Injection -> Hilt
+hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hiltAndroid" }
+hilt-android-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hiltAndroid" }
+
+# Media3 (ExoPlayer)
+androidx-media3-exoplayer = { group = "androidx.media3", name = "media3-exoplayer", version.ref = "media3Version" }
+androidx-media3-ui = { group = "androidx.media3", name = "media3-ui", version.ref = "media3Version" }
+androidx-media3-session = { group = "androidx.media3", name = "media3-session", version.ref = "media3Version" }
+androidx-media3-common = { group = "androidx.media3", name = "media3-common", version.ref = "media3Version" }
+
+# Glide
+glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glide" }
+
+# Palette
+androidx-palette = { group = "androidx.palette", name = "palette-ktx", version.ref = "palette" }
+
+# Lottie Animations
+lottie = { group = "com.airbnb.android", name = "lottie", version.ref = "lottie" }

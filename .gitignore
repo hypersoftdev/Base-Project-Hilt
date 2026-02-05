@@ -1,0 +1,29 @@
+### OS ###
+.DS_Store
+Thumbs.db
+
+### IDE / Android Studio ###
+.idea/
+*.iml
+.gradle/
+local.properties
+.cxx/
+.externalNativeBuild/
+captures/
+
+### Build outputs ###
+/build/
+/app/build/
+/core/build/
+/data/build/
+/domain/build/
+/presentation/build/
+
+### Logs ###
+*.log
+
+### Keystores / secrets ###
+*.jks
+*.keystore
+**/google-services.json
+

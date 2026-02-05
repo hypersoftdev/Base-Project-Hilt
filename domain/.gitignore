@@ -1,0 +1,13 @@
+## Module-specific Git ignore rules for `domain`
+
+# Gradle build output
+/build/
+
+# Android Studio / IntelliJ module files
+*.iml
+
+# Native build artifacts
+.cxx/
+.externalNativeBuild/
+captures/
+
