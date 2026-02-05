@@ -2,6 +2,7 @@
 
 - **MVI + Clean Architecture**
 - **Multi‑module (by layers)**
+- **DI: Hilt**
 
 ## Topics Covered
 
